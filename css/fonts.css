@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Montserrat-ExtraBold';
+    src: url('./../fonts/Montserrat-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('./../fonts/Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url('./../fonts/Montserrat-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-Black';
+    src: url('./../fonts/Montserrat-Black.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url('./../fonts/Montserrat-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('./../fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Neris-Black';
+    src: url('./../fonts/Neris-Black.otf');
+}
+
+
+function validate(){
+    var nameUser = document.getElementById("nameUser"); 
+    if(nameUser.value.length == 0){
+         nameUser.classList.remove('success');
+         nameUser.classList.add('error');  
+         document.getElementById("errorNameUser").innerHTML = 'El Campo de Nombre es Obligatorio';
+         return 0;
+    }else{
+         nameUser.classList.remove('error');
+         nameUser.classList.add('success');
+         document.getElementById("errorNameUser").innerHTML = '';
+    } 
+ }
+ 
+ function validate2(){
+     var address = document.getElementById("address");
+    if(address.value.length == 0){
+         address.classList.remove('success');
+         address.classList.add('error');
+         document.getElementById("errorAddress").innerHTML = 'El campo de Dirección de residencia es Obligatorio';
+         return 0;
+     }else{
+         address.classList.remove('error');
+         address.classList,add('success');
+         document.getElementById("errorAddress").innerHTML = '';
+     }
+ }
